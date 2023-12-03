@@ -1,5 +1,6 @@
 package com.namphan.spotify.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,9 +18,11 @@ public class AccountPlaylist {
 
     @ManyToOne
     @JoinColumn(name = "accountId")
+    @JsonIgnore
     private Account account;
 
     @ManyToOne
     @JoinColumn(name = "playlistId")
+    @JsonIgnore
     private Playlist playlist;
 }

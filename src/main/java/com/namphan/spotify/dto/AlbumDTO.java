@@ -12,7 +12,7 @@ public class AlbumDTO {
     String albumName;
     String description;
     String imageCover;
-    String status;
+    boolean status;
     int yearRelease;
     int artistId;
     int songId;

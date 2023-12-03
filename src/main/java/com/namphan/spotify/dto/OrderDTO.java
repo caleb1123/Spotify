@@ -5,12 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class orderDTO {
+public class OrderDTO {
     int orderId;
     String status;
     String orderCode;
