@@ -32,16 +32,13 @@ public class Song {
 
     @ManyToOne
     @JoinColumn(name = "artistId")
-    @JsonIgnore
     private Account account;
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    @JsonIgnore
     private Category category;
 
     @OneToMany(mappedBy = "song")
-    @JsonIgnore
     private Collection<PlaylistSong> playlistSongs;
 
     @OneToMany(mappedBy = "song")

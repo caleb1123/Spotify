@@ -8,6 +8,9 @@ import com.namphan.spotify.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class AlbumConverter {
 
@@ -59,5 +62,12 @@ public class AlbumConverter {
         dto.setSongId(songConverter.toDTO(album.getSong()).getSongId());
 
         return dto;
+    }
+    public List<AlbumDTO> convertToAlbumDTOList(List<Album> albums) {
+        List<AlbumDTO> albumDTOList = new ArrayList<>();
+        for (Album album : albums) {
+            albumDTOList.add(toDTO(album));
+        }
+        return albumDTOList;
     }
 }

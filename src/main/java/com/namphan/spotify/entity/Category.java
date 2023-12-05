@@ -16,14 +16,11 @@ import java.util.Collection;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
     private int categoryId;
 
     @Column(columnDefinition = "varchar(20) not null")
-    @JsonIgnore
     private String categoryName;
 
     @OneToMany(mappedBy = "category")
-    @JsonIgnore
     private Collection<Song> songs;
 }

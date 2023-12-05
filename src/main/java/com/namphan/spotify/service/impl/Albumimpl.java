@@ -1,6 +1,7 @@
 package com.namphan.spotify.service.impl;
 
 import com.namphan.spotify.converter.AlbumConverter;
+import com.namphan.spotify.dto.AlbumDTO;
 import com.namphan.spotify.entity.Album;
 import com.namphan.spotify.repository.AlbumRepository;
 import com.namphan.spotify.service.AlbumService;
@@ -20,9 +21,9 @@ public class Albumimpl implements AlbumService {
 
 
     @Override
-    public List<Album> getAllAblum() {
+    public List<AlbumDTO> getAllAblum() {
         List<Album> list = albumRepository.getAllAlbum();
 
-        return list;
+        return albumConverter.convertToAlbumDTOList(list);
     }
 }

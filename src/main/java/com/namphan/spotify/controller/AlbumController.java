@@ -1,5 +1,6 @@
 package com.namphan.spotify.controller;
 
+import com.namphan.spotify.dto.AlbumDTO;
 import com.namphan.spotify.entity.Album;
 import com.namphan.spotify.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class AlbumController {
     }
 
     @GetMapping("/all")
-    public List<Album> getAllAlbums() {
+    public List<AlbumDTO> getAllAlbums() {
         return albumService.getAllAblum();
     }
 }

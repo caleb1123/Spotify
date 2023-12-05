@@ -21,11 +21,9 @@ public class OrderAlbum {
 
     @ManyToOne
     @JoinColumn(name = "orderId")
-    @JsonIgnore
     private Order order;
 
     @ManyToOne
     @JoinColumn(name = "albumId")
-    @JsonIgnore
     private Album album;
 }

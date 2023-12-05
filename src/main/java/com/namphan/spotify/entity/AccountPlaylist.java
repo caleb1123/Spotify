@@ -18,11 +18,9 @@ public class AccountPlaylist {
 
     @ManyToOne
     @JoinColumn(name = "accountId")
-    @JsonIgnore
     private Account account;
 
     @ManyToOne
     @JoinColumn(name = "playlistId")
-    @JsonIgnore
     private Playlist playlist;
 }

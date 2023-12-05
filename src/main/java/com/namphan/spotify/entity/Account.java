@@ -48,30 +48,24 @@ public class Account {
 
     @ManyToOne
     @JoinColumn(name = "roleId")
-    @JsonIgnore
     private Role role;
 
     @OneToMany(mappedBy = "account")
-    @JsonIgnore
     private Collection<Song> songs;
 
     @OneToMany(mappedBy = "account")
-    @JsonIgnore
+
     private Collection<Album> albums;
 
     @OneToMany(mappedBy = "account")
-    @JsonIgnore
     private Collection<AccountPlaylist> accountPlaylists;
 
     @OneToMany(mappedBy = "account")
-    @JsonIgnore
     private Collection<Follow> followers;
 
     @OneToMany(mappedBy = "account1")
-    @JsonIgnore
     private Collection<Follow> followings;
 
     @OneToMany(mappedBy = "account")
-    @JsonIgnore
     private Collection<Order> orders;
 }

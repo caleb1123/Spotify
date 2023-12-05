@@ -35,15 +35,13 @@ public class Album {
 
     @ManyToOne
     @JoinColumn(name = "artistId")
-    @JsonIgnore
+
     private Account account;
 
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "songId")
     private Song song;
 
     @OneToMany(mappedBy = "album")
-    @JsonIgnore
     private Collection<OrderAlbum> orderAlbums;
 }
