@@ -38,9 +38,8 @@ public class Album {
 
     private Account account;
 
-    @ManyToOne
-    @JoinColumn(name = "songId")
-    private Song song;
+    @OneToMany(mappedBy = "album")
+    private Collection<SongAlbum> songAlbums;
 
     @OneToMany(mappedBy = "album")
     private Collection<OrderAlbum> orderAlbums;

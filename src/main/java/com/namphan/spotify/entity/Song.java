@@ -42,7 +42,7 @@ public class Song {
     private Collection<PlaylistSong> playlistSongs;
 
     @OneToMany(mappedBy = "song")
-    private Collection<Album> albums;
+    private Collection<SongAlbum> songAlbums;
 
 
 }

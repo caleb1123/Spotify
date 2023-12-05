@@ -1,11 +1,16 @@
 package com.namphan.spotify.converter;
 
+import com.namphan.spotify.dto.AlbumDTO;
 import com.namphan.spotify.dto.SongDTO;
+import com.namphan.spotify.entity.Album;
 import com.namphan.spotify.entity.Song;
 import com.namphan.spotify.repository.AccountRepository;
 import com.namphan.spotify.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class SongConverter {
@@ -51,5 +56,13 @@ public class SongConverter {
         dto.setCategoryId(categoryConverter.toCategoryDTO(song.getCategory()).getCategoryId());
 
         return dto;
+    }
+
+    public List<SongDTO> convertToAlbumDTOList(List<Song> songs) {
+        List<SongDTO> songDTOList = new ArrayList<>();
+        for (Song album : songs) {
+            songDTOList.add(toDTO(album));
+        }
+        return songDTOList;
     }
 }

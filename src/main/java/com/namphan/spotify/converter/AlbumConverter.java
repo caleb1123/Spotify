@@ -40,7 +40,7 @@ public class AlbumConverter {
         entity.setYearRelease(albumDTO.getYearRelease());
         // Assuming artistId and songId are IDs only
         entity.setAccount(accountRepository.getReferenceById(albumDTO.getArtistId()));
-        entity.setSong(songRepository.getReferenceById(albumDTO.getSongId()));
+
 
         return entity;
     }
@@ -59,7 +59,7 @@ public class AlbumConverter {
         dto.setYearRelease(album.getYearRelease());
         // Assuming artistId and songId are IDs only
         dto.setArtistId(accountConverter.toDTO(album.getAccount()).getAccountId());
-        dto.setSongId(songConverter.toDTO(album.getSong()).getSongId());
+
 
         return dto;
     }

@@ -11,14 +11,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class Albumimpl implements AlbumService {
-    private final AlbumRepository albumRepository;
-    private final AlbumConverter albumConverter;
     @Autowired
-    public Albumimpl(AlbumRepository albumRepository, AlbumConverter albumConverter) {
-        this.albumRepository = albumRepository;
-        this.albumConverter = albumConverter;
-    }
-
+    AlbumRepository albumRepository;
+    @Autowired
+    AlbumConverter albumConverter;
 
     @Override
     public List<AlbumDTO> getAllAblum() {

@@ -22,7 +22,7 @@ public class AccountConverter {
         entity.setAccountId(accountsDTO.getAccountId());
         entity.setUserName(accountsDTO.getUserName());
         entity.setPassword(accountsDTO.getPassword());
-        entity.setRole(roleRepository.getReferenceById(accountsDTO.getAccountId()));
+        entity.setRole(roleRepository.getReferenceById(accountsDTO.getRoleId()));
         entity.setEmail(accountsDTO.getEmail());
         entity.setDob(accountsDTO.getDob());
         entity.setName(accountsDTO.getName());
