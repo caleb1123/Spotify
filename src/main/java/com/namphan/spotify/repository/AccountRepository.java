@@ -10,8 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface AccountRepository extends JpaRepository<Account, Integer> {
 
-    Account findAccountByUserName(String userName);
-    Account findUserByEmail(String email);
-    @Query(value = "SELECT * FROM accounts WHERE user_name = :userName AND password = :password", nativeQuery = true)
-    Account findAccountByUserNameAndPassword(String userName,String password);
+
+    @Query(value = "SELECT * FROM accounts WHERE user_name = :userName", nativeQuery = true)
+    Account getAccountByUserName(String userName);
 }
