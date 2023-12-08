@@ -23,4 +23,11 @@ public class PlaylistSongImpl implements PlaylistSongService {
         List<PlaylistSong> playlistSongs = playlistSongRepository.getAll();
         return playlistSongConverter.convertToPlaylistSongDTOList(playlistSongs);
     }
+
+    @Override
+    public List<PlaylistSongDTO> getAllbyPlaylistId(int playlistId) {
+        List<PlaylistSong> playlistSong = playlistSongRepository.getAllByPlaylistId(playlistId);
+
+        return playlistSongConverter.convertToPlaylistSongDTOList(playlistSong);
+    }
 }

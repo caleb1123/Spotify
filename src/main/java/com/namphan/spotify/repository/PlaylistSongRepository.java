@@ -14,4 +14,7 @@ public interface PlaylistSongRepository extends JpaRepository<PlaylistSong,Integ
             "from playlist_song", nativeQuery = true)
     List<PlaylistSong> getAll();
 
+    @Query(value = "select * from playlist_song where playlist_id = :playlistId\n",nativeQuery = true)
+    List<PlaylistSong> getAllByPlaylistId(int playlistId);
+
 }

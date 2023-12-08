@@ -24,4 +24,17 @@ public class Songimpl implements SongService {
 
         return songConverter.convertToAlbumDTOList(list);
     }
+
+    @Override
+    public List<SongDTO> getAllSongbyCategory(int categoryId) {
+        List<Song> song = songRepository.getAllSongbyCategory(categoryId);
+
+        return songConverter.convertToAlbumDTOList(song);
+    }
+
+    @Override
+    public SongDTO getbySongName(String songName) {
+        Song song = songRepository.getSongbyName(songName);
+        return songConverter.toDTO(song);
+    }
 }

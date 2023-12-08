@@ -14,4 +14,8 @@ import java.util.List;
 public interface SongRepository extends JpaRepository<Song, Integer> {
     @Query(value = "select * from songs", nativeQuery = true)
     List<Song> getAllSong();
+    @Query(value = "select * from songs where category_id = :categoryId", nativeQuery = true)
+    List<Song> getAllSongbyCategory(int categoryId);
+    @Query(value = "select * from songs where song_name = :songName",nativeQuery = true)
+    Song getSongbyName(String songName);
 }
