@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class Albumimpl implements AlbumService {
+public class AlbumImpl implements AlbumService {
     @Autowired
     AlbumRepository albumRepository;
     @Autowired

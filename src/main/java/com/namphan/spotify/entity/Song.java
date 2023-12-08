@@ -44,5 +44,6 @@ public class Song {
     @OneToMany(mappedBy = "song")
     private Collection<SongAlbum> songAlbums;
 
-
+    @OneToMany(mappedBy = "song")
+    private Collection<ListenHistory> listenHistories;
 }

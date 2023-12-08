@@ -33,4 +33,6 @@ public class Playlist {
 
     @OneToMany(mappedBy = "playlist")
     private Collection<PlaylistSong> playlistSongs;
+    @OneToMany(mappedBy = "playlist")
+    private Collection<ListenHistory> listenHistories;
 }

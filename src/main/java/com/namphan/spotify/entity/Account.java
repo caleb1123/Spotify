@@ -68,4 +68,7 @@ public class Account {
 
     @OneToMany(mappedBy = "account")
     private Collection<Order> orders;
+
+    @OneToMany(mappedBy = "account")
+    private Collection<ListenHistory> listenHistories;
 }
