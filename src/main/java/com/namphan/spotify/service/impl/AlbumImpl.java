@@ -1,8 +1,8 @@
 package com.namphan.spotify.service.impl;
 
 import com.namphan.spotify.converter.AlbumConverter;
-import com.namphan.spotify.dto.AlbumDTO;
-import com.namphan.spotify.entity.Album;
+import com.namphan.spotify.model.dto.AlbumDTO;
+import com.namphan.spotify.model.entity.Album;
 import com.namphan.spotify.repository.AlbumRepository;
 import com.namphan.spotify.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;

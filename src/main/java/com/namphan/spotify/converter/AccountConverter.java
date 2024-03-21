@@ -1,18 +1,14 @@
 package com.namphan.spotify.converter;
 
-import com.namphan.spotify.dto.AccountsDTO;
-import com.namphan.spotify.entity.Account;
-import com.namphan.spotify.repository.RoleRepository;
+import com.namphan.spotify.model.dto.AccountsDTO;
+import com.namphan.spotify.model.entity.Account;
+import com.namphan.spotify.model.entity.ERole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AccountConverter {
-    @Autowired
-    RoleRepository roleRepository;
 
-    @Autowired
-    RoleConverter roleConverter;
     public Account toEntity(AccountsDTO accountsDTO) {
         if (accountsDTO == null) {
             return null;
@@ -22,7 +18,8 @@ public class AccountConverter {
         entity.setAccountId(accountsDTO.getAccountId());
         entity.setUserName(accountsDTO.getUserName());
         entity.setPassword(accountsDTO.getPassword());
-        entity.setRole(roleRepository.getReferenceById(accountsDTO.getRoleId()));
+        // Set role based on ERole enum value
+        entity.setRole(ERole.valueOf(accountsDTO.getRole())); // Assuming you have a getter for roleName in AccountsDTO
         entity.setEmail(accountsDTO.getEmail());
         entity.setDob(accountsDTO.getDob());
         entity.setName(accountsDTO.getName());
@@ -41,9 +38,10 @@ public class AccountConverter {
 
         AccountsDTO dto = new AccountsDTO();
         dto.setAccountId(account.getAccountId());
-        dto.setUserName(account.getUserName());
+        dto.setUserName(account.getUsername());
         dto.setPassword(account.getPassword());
-        dto.setRoleId(roleConverter.toDTO(account.getRole()).getRoleId());
+        // Set roleName based on role enum value
+        dto.setRole(account.getRole().name()); // Assuming you have a getter for role in Account entity
         dto.setEmail(account.getEmail());
         dto.setDob(account.getDob());
         dto.setName(account.getName());

@@ -1,9 +1,6 @@
 package com.namphan.spotify.repository;
 
-import com.namphan.spotify.dto.ListenHistoryDTO;
-import com.namphan.spotify.entity.Album;
-import com.namphan.spotify.entity.ListenHistory;
-import com.namphan.spotify.request.MostTimesInWeekbySongId;
+import com.namphan.spotify.model.entity.ListenHistory;
 import jakarta.persistence.Tuple;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

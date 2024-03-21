@@ -1,6 +1,6 @@
 package com.namphan.spotify.controller;
 
-import com.namphan.spotify.dto.AccountsDTO;
+import com.namphan.spotify.model.dto.AccountsDTO;
 import com.namphan.spotify.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,7 @@
 package com.namphan.spotify.converter;
 
-import com.namphan.spotify.dto.PlaylistDTO;
-import com.namphan.spotify.entity.Playlist;
+import com.namphan.spotify.model.dto.PlaylistDTO;
+import com.namphan.spotify.model.entity.Playlist;
 import org.springframework.stereotype.Component;
 
 @Component

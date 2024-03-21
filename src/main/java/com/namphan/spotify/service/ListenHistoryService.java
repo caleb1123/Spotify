@@ -1,6 +1,6 @@
 package com.namphan.spotify.service;
 
-import com.namphan.spotify.request.MostTimesInWeekbySongId;
+import com.namphan.spotify.model.request.MostTimesInWeekbySongId;
 
 import java.util.List;
 

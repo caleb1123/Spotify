@@ -1,8 +1,8 @@
 package com.namphan.spotify.service.impl;
 
 import com.namphan.spotify.converter.CategoryConverter;
-import com.namphan.spotify.dto.CategoryDTO;
-import com.namphan.spotify.entity.Category;
+import com.namphan.spotify.model.dto.CategoryDTO;
+import com.namphan.spotify.model.entity.Category;
 import com.namphan.spotify.repository.CategoryRepository;
 import com.namphan.spotify.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

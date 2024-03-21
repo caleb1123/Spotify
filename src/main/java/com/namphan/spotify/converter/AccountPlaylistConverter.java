@@ -1,7 +1,7 @@
 package com.namphan.spotify.converter;
 
-import com.namphan.spotify.dto.AccountPlaylistDTO;
-import com.namphan.spotify.entity.AccountPlaylist;
+import com.namphan.spotify.model.dto.AccountPlaylistDTO;
+import com.namphan.spotify.model.entity.AccountPlaylist;
 import com.namphan.spotify.repository.AccountPlaylistRepository;
 import com.namphan.spotify.repository.AccountRepository;
 import com.namphan.spotify.repository.PlaylistRepository;

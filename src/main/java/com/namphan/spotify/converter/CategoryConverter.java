@@ -1,9 +1,7 @@
 package com.namphan.spotify.converter;
 
-import com.namphan.spotify.dto.AlbumDTO;
-import com.namphan.spotify.dto.CategoryDTO;
-import com.namphan.spotify.entity.Album;
-import com.namphan.spotify.entity.Category;
+import com.namphan.spotify.model.dto.CategoryDTO;
+import com.namphan.spotify.model.entity.Category;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

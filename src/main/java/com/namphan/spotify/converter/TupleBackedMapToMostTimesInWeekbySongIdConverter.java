@@ -1,6 +1,6 @@
 package com.namphan.spotify.converter;
 
-import com.namphan.spotify.request.MostTimesInWeekbySongId;
+import com.namphan.spotify.model.request.MostTimesInWeekbySongId;
 import jakarta.persistence.Tuple;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

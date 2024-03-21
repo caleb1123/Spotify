@@ -1,7 +1,6 @@
 package com.namphan.spotify.repository;
 
-import com.namphan.spotify.entity.Account;
-import com.namphan.spotify.entity.AccountPlaylist;
+import com.namphan.spotify.model.entity.AccountPlaylist;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

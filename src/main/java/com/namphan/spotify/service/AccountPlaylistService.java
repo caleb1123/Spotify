@@ -1,6 +1,6 @@
 package com.namphan.spotify.service;
 
-import com.namphan.spotify.dto.AccountPlaylistDTO;
+import com.namphan.spotify.model.dto.AccountPlaylistDTO;
 
 import java.util.List;
 

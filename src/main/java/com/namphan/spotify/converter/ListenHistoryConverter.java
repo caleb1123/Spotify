@@ -1,8 +1,7 @@
 package com.namphan.spotify.converter;
 
-import com.namphan.spotify.dto.ListenHistoryDTO;
-import com.namphan.spotify.entity.ListenHistory;
-import com.namphan.spotify.entity.Song;
+import com.namphan.spotify.model.dto.ListenHistoryDTO;
+import com.namphan.spotify.model.entity.ListenHistory;
 import com.namphan.spotify.repository.AccountRepository;
 import com.namphan.spotify.repository.PlaylistRepository;
 import com.namphan.spotify.repository.SongRepository;
